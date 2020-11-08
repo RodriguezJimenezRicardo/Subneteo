@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subneteo</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="icon" type="image/png" href="images/Subneteo.png">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+          <div class="one-half column" style="margin-top: 15%">            
+            
+            <h1>Subneteo</h1>
+            
+            <p>Direccion IP: <input type="text" id="dip" onkeypress="return ip(event)" maxlength="15"></p>
+            <p>Numero de subredes: <input type="text" id="nsub" onkeypress="return num(event)" maxlength="3"></p>
+            <p>Numero de host: <input type="text" id="nhost" onkeypress="return num(event)" maxlength="7"></p>
+            <p><input type="button" value="Subneteo" onclick="validarip()" >
+                <input type="button" value="Subneteo por numero de host" onclick="subneteohost()">
+                <input type="button" value="Convertir a binario" onclick="convertirbin()"></p>
+            
+            <div id="texto">                
+                <p id="resultado"></p>
+            </div>
+            <div id="divtable"></div>               
+          </div>
+        </div>
+    </div>   
+
+
+    <script src="js/subneteo.js"></script>
+    <script src="js/validacion.js"></script>
+</body>
+</html>
